@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaoudou Samaké | Portfolio Noir & Or</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Curseur personnalisé (deux éléments) -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header>
+        <nav>
+            <div class="logo">✨ Yaoudou Samaké</div>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section Accueil avec effet machine à écrire -->
+        <section id="accueil" class="hero">
+            <div class="hero-content">
+                <h1>Bonjour, je suis <span class="gold">Yaoudou</span></h1>
+                <div class="typewriter-container">
+                    <p class="typewriter-text"></p>
+                </div>
+                <a href="#projets" class="btn">Voir mes projets →</a>
+            </div>
+        </section>
+
+        <!-- Section À propos de moi -->
+<section id="about" class="about">
+    <h2>À propos de moi</h2>
+    <div class="about-container">
+        <div class="about-text">
+            <p>Développeuse web passionnée, spécialisée dans la création de sites modernes, élégants et responsives.</p>
+            <p>J’utilise <span class="gold">HTML, CSS, PHP et JavaScript</span> pour concevoir des interfaces propres, performantes et adaptées à tous les écrans.</p>
+            <p>Je travaille actuellement sur plusieurs projets, dont un site e-commerce avec panier dynamique.</p>
+            <p class="about-highlight">📌 Disponible pour projets freelance, stages et collaborations.</p>
+        </div>
+        <div class="about-icon">
+    <img src="Ma photo.jpeg" alt="Yaoudou Samaké" style="width: 250px; height: 250px; border-radius: 50%; object-fit: cover; border: 2px solid #d4af37;">
+</div>
+    </div>
+</section>
+
+        <!-- Section Projets -->
+        <section id="projets" class="projects">
+            <h2>Mes projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>E‑commerce</h3>
+                    <p>Plateforme de vente en ligne avec paiement sécurisé.</p>
+                    <a href="https://github.com/YaoudouSamake/E-commerce" class="card-link" target="_blank">Voir le projet →</a>
+                </div>
+                <div class="project-card">
+                    <h3>Fruits & légumes</h3>
+                    <p>Widget animations douces et palette sombre.</p>
+                    <a href="https://github.com/YaoudouSamake/Fruits_Legumes" class="card-link" target="_blank">Voir le projet →</a>
+                </div>
+                <div class="project-card">
+                    <h3>Application-crud</h3>
+                    <p>Thème noir & or, entièrement responsive.</p>
+                    <a href="https://github.com/YaoudouSamake/Application-crud" class="card-link" target="_blank">Voir le projet →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Compétences + compteurs -->
+        <section id="competences" class="skills">
+            <h2>Compétences</h2>
+            <div class="skills-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="2">0</span>
+                    <span class="stat-label">ans d'expérience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="4">0</span>
+                    <span class="stat-label">projets réalisés</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="100">0</span>
+                    <span class="stat-label">% satisfaction</span>
+                </div>
+            </div>
+            <div class="skills-list">
+                <span>HTML5 / CSS3</span>
+                <span>JavaScript (ES6)</span>
+                <span>Responsive Design</span>
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>Git & GitHub</span>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="contact">
+            <h2>Contactez-moi</h2>
+            <p>Vous avez un projet en tête ou souhaitez discuter de potentialités ? N'hésitez pas à me contacter !</p>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Votre nom" required>
+                <input type="email" id="email" placeholder="Votre email" required>
+                <textarea id="message" placeholder="Votre message" rows="5" required></textarea>
+                <button type="submit" class="btn">Envoyer</button>
+                <div class="form-feedback"></div>
+            </form>
+            <p class="social">Retrouvez-moi sur 
+                <a href="https://www.linkedin.com/in/yaoudou-samak%C3%A9-98a249404/" target="_blank">LinkedIn</a> / 
+                <a href="https://github.com/YaoudouSamake" target="_blank">GitHub</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Yaoudou Samaké – Design <span class="gold">noir & or</span></p>
+    </footer>
+
+    <!-- Bouton retour en haut -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
