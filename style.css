@@ -383,6 +383,122 @@ input:focus, textarea:focus {
     filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
 }
 
+/* ===== SECTION EXPÉRIENCE ===== */
+.experience {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 2rem;
+}
+
+/* Ligne verticale */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #d4af37, #d4af37 80%, transparent);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -2rem;
+    top: 0.5rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #d4af37;
+    border: 2px solid #0a0a0a;
+    box-shadow: 0 0 0 2px #d4af37;
+    z-index: 2;
+}
+
+.timeline-content {
+    background: #111111;
+    border: 1px solid #2a2a2a;
+    border-radius: 1.2rem;
+    padding: 1.5rem;
+    margin-left: 1.5rem;
+    flex: 1;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.timeline-content:hover {
+    transform: translateX(8px);
+    border-color: #d4af37;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.1);
+}
+
+.timeline-date {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #d4af37;
+    background: rgba(212, 175, 55, 0.15);
+    padding: 0.2rem 0.8rem;
+    border-radius: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.timeline-content h3 {
+    font-size: 1.3rem;
+    color: #e0e0e0;
+    margin-bottom: 0.25rem;
+}
+
+.timeline-content h4 {
+    font-size: 0.95rem;
+    color: #d4af37;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.timeline-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #bbbbbb;
+}
+
+/* Responsive pour la timeline */
+@media (max-width: 700px) {
+    .timeline {
+        padding-left: 1rem;
+    }
+    .timeline::before {
+        left: 10px;
+    }
+    .timeline-dot {
+        left: -1rem;
+        width: 10px;
+        height: 10px;
+    }
+    .timeline-content {
+        margin-left: 1rem;
+        padding: 1rem;
+    }
+    .timeline-content h3 {
+        font-size: 1.1rem;
+    }
+    .timeline-content:hover {
+        transform: translateX(4px);
+    }
+}
+
 /* Responsive pour la section about */
 @media (max-width: 700px) {
     .about-container {

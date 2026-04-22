@@ -10,7 +10,7 @@ window.addEventListener('mousemove', (e) => {
 });
 
 // 2. Machine à écrire
-const texts = ["Développeur web full-stack", "Créateur d'interfaces élégantes", "Passionnée par le code et le design"];
+const texts = ["Développeuse web full-stack", "Créatrice d'interfaces élégantes", "Passionnée par le code et le design"];
 let index = 0;
 let charIndex = 0;
 let isDeleting = false;
