@@ -65,6 +65,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+   
 }
 
 nav {
@@ -376,13 +377,21 @@ input:focus, textarea:focus {
 }
 
 .about-icon {
-    flex: 0 0 80px;
+    
+    flex: 0 0 auto;
     text-align: center;
     font-size: 4rem;
     opacity: 0.8;
     filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
 }
 
+.about-photo {
+    width: 100%;
+    max-width: 180px;   /* limite sur desktop, s’adapte sur mobile */
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #d4af37;
+}
 /* ===== SECTION EXPÉRIENCE ===== */
 .experience {
     max-width: 1100px;
@@ -540,5 +549,15 @@ input:focus, textarea:focus {
     }
     body {
         cursor: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline {
+        padding-left: 0.5rem;
+    }
+    .timeline-content {
+        margin-left: 0.8rem;
+        padding: 0.8rem;
     }
 }
