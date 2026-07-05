@@ -98,43 +98,44 @@ backBtn.addEventListener('click', () => {
 // 6. Formulaire avec envoi réel via Formspree
 const form = document.getElementById('contact-form');
 const feedback = document.querySelector('.form-feedback');
+const nextField = document.querySelector('input[name="_next"]');
 
-form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const name    = document.getElementById('name').value.trim();
-    const email   = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    // Validations
-    if (!name || !email || !message) {
-        feedback.innerHTML = '<span style="color:#d4af37;">❌ Tous les champs sont obligatoires.</span>';
-        return;
-    }
-    if (!email.includes('@') || !email.includes('.')) {
-        feedback.innerHTML = '<span style="color:#d4af37;">❌ Email invalide.</span>';
-        return;
+if (form && feedback) {
+    if (nextField) {
+        const baseUrl = window.location.href.split('?')[0];
+        nextField.value = `${baseUrl}?sent=1`;
     }
 
-    // Envoi à Formspree
-    try {
-        const response = await fetch(form.action, {
-            method: 'POST',
-            body: new FormData(form),
-            headers: { 'Accept': 'application/json' }
-        });
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('sent') === '1') {
+        feedback.innerHTML = '<span style="color:#d4af37;">✨ Message envoyé avec succès ! Je vous répondrai rapidement.</span>';
+    }
 
-        if (response.ok) {
-            feedback.innerHTML = '<span style="color:#d4af37;">✨ Message envoyé avec succès ! Je vous répondrai rapidement.</span>';
-            form.reset();
-            setTimeout(() => feedback.innerHTML = '', 4000);
-        } else {
-            feedback.innerHTML = '<span style="color:#d4af37;">❌ Erreur lors de l\'envoi. Réessayez.</span>';
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+        const submitButton = form.querySelector('button[type="submit"]');
+
+        if (!name || !email || !message) {
+            feedback.innerHTML = '<span style="color:#d4af37;">❌ Tous les champs sont obligatoires.</span>';
+            return;
         }
-    } catch (error) {
-        feedback.innerHTML = '<span style="color:#d4af37;">❌ Problème de connexion. Réessayez.</span>';
-    }
-});
+        if (!email.includes('@') || !email.includes('.')) {
+            feedback.innerHTML = '<span style="color:#d4af37;">❌ Email invalide.</span>';
+            return;
+        }
+
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = 'Envoi...';
+        }
+
+        form.submit();
+    });
+}
 // 7. Navigation fluide (déjà présente mais on renforce)
 document.querySelectorAll('nav a, .hero .btn').forEach(anchor => {
     anchor.addEventListener('click', function(e) {

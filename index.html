@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yaoudou Samaké | Portfolio Noir & Or</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .stat-suffix {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #d4af37;
+            margin-left: 2px;
+        }
+    </style>
 </head>
 <body>
     <div class="particles"></div>
@@ -22,7 +30,7 @@
                 <li><a href="#about">À Propos </a></li>
                 <li><a href="#projets">Projets</a></li>
                 <li><a href="#competences">Compétences</a></li>
-                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#experience">Expériences</a></li>
                 <li><a href="#contact">Contact</a></li>
 
             </ul>
@@ -38,7 +46,7 @@
                     <p class="typewriter-text"></p>
                 </div>
                 <a href="#projets" class="btn">Voir mes projets →</a>
-                <a href="images/Mon cv.jpeg" class="btn btn-cv" download>Télécharger mon CV ↓</a>
+             <a href="documents/CV_Yaoudou_Samake.pdf" class="btn btn-cv" download="CV_Yaoudou_Samake.pdf">Télécharger mon CV ↓</a>
             </div>
         </section>
 
@@ -47,9 +55,9 @@
     <h2>À propos de moi</h2>
     <div class="about-container">
         <div class="about-text">
-            <p>Développeuse web passionnée par la création d’expériences en ligne fluides et percutantes.</p>
+            <p>Développeuse full stack passionnée par la création d’expériences en ligne fluides et percutantes.</p>
             <p> Diplômée en informatique internet (certification Force N).</p>
-            <p>Je conçois des sites modernes, entièrement adaptés à tous les écrans, avec un soin particulier pour l’esthétique, la performance et l’accessibilité.</p>
+            <p>Je conçois des applications, entièrement adaptés à tous les écrans, avec un soin particulier pour l’esthétique, la performance et l’accessibilité.</p>
             <p>Actuellement engagée dans le développement d’une solution e‑commerce complète (interface utilisateur intuitive, panier dynamique).</p>
             <p class="about-highlight">📌 Disponible pour des missions freelance, des stages ou des collaborations techniques.</p>
         </div>
@@ -65,7 +73,7 @@
             <h2>Mes projets</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                      <img src="images/Ecommerce.phg" alt="Commerce" 
+                      <img src="images/Ecommerce.png" alt="Commerce" 
          style="width:100%;border-radius:0.8rem;margin-bottom:1rem;height:160px;object-fit:cover;">
                     <h3>E‑commerce</h3>
                     <p>Plateforme de vente en ligne avec paiement sécurisé.</p>
@@ -130,11 +138,11 @@
             <h2>Compétences</h2>
             <div class="skills-stats">
                 <div class="stat">
-                    <span class="stat-number" data-target="2">0</span>
+                    <span class="stat-number" data-target="2">0</span><span class="stat-suffix">+</span>
                     <span class="stat-label">ans d'expérience</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number" data-target="5">0</span>
+                    <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
                     <span class="stat-label">projets réalisés</span>
                 </div>
                 <div class="stat">
@@ -208,12 +216,14 @@
         <section id="contact" class="contact">
             <h2>Contactez-moi</h2>
             <p>Vous avez un projet en tête ou souhaitez discuter de potentialités ? N'hésitez pas à me contacter !</p>
-           <form id="contact-form" action="https://formspree.io/f/xwvdqbbo" method="POST">
-    <input type="text"  name="name"    id="name"    placeholder="Votre nom"     required>
-    <input type="email" name="email"   id="email"   placeholder="Votre email"   required>
-    <textarea           name="message" id="message" placeholder="Votre message" rows="5" required></textarea>
+           <form id="contact-form" action="https://formspree.io/f/xwvdqbbo" method="POST" accept-charset="UTF-8">
+    <input type="text" name="name" id="name" placeholder="Votre nom" required>
+    <input type="email" name="email" id="email" placeholder="Votre email" required>
+    <textarea name="message" id="message" placeholder="Votre message" rows="5" required></textarea>
+    <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
+    <input type="hidden" name="_next" value="">
     <button type="submit" class="btn">Envoyer</button>
-    <div class="form-feedback"></div>
+    <div class="form-feedback" aria-live="polite"></div>
 </form>
             <p class="social">Retrouvez-moi sur 
                 <a href="https://www.linkedin.com/in/yaoudou-samak%C3%A9-98a249404/" target="_blank">LinkedIn</a> / 
